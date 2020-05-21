@@ -1,0 +1,25 @@
+#banner {
+    background-color: #FFC90E;
+    display: grid;
+    grid-template-areas:
+      "logo toolbar"
+      "title title";
+  }
+.logo{
+  padding-top: 2%;
+  padding-right: 2%;
+  padding-left: 2%;
+}
+
+header#banner h1 {
+    font-size:1em;
+    background-color: #99D9EA;
+    grid-area:title;
+    padding:1%;
+    margin-bottom:0;
+  }
+
+// Button to the right
+.right-side {
+    float: right;
+}
