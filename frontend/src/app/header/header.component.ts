@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { Observable } from 'rxjs';
-import { startWith, map, filter, mergeMap} from 'rxjs/operators';
-
-import { environment } from '../../environments/environment';
-// import { NavBarService } from '../services/nav-bar.service';
+import { Services } from './../services/services'
 
 
 @Component({
@@ -13,17 +10,16 @@ import { environment } from '../../environments/environment';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-    env = {
-      appTitle: 'Bob'
-  };
-  page$: Observable<string>;
-  subtitle = '';
-
+  result: any;
+  fact: string;
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
+    private Services: Services,
     ) {}
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.result = await this.Services.getRandomFact()
+    this.fact = this.result.text
   }
 }
