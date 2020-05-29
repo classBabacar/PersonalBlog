@@ -1,21 +1,15 @@
 
-const {
-    DB_URL
-} = process.env;
+async function startProcess() {
+    await conn.connect();
+}
 
+require('dotenv').config();
+const DB_URL= process.env.DB_URL;
 
-
-const {MongoClient} = require("mongodb");
-
-let conn = new MongoClient(DB_URL, {useUnifiedTopology: true});
+const { MongoClient } = require('mongodb');
+const conn = new MongoClient(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+startProcess()
 
 module.exports = {
-    /**
-     * Singleton-like Database Object that connects to the mongodb database
-     */
-    async getDbo(){
-        if(!conn.isConnected())
-            await conn.connect();
-        return conn.db();
-    }
+    conn
 }
