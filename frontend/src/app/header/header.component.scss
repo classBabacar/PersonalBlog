@@ -14,12 +14,12 @@
 header#banner h1 {
     background-color: #99D9EA;
     grid-area:title;
-    padding:1%;
+    padding:0.6%;
     margin-bottom:0;
   }
 
 #text {
-  text-align: center;
+  text-align: right;
   font-size: 1.5em;
 }
 
@@ -28,6 +28,6 @@ mat-card{
   margin-left:auto;
   margin-right: auto;
   text-align: center;
-  background-color: chocolate;
+  background-color: coral;
   margin-top: -8%;
 }
