@@ -5,7 +5,9 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './homepage/homepage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { Services } from './services/services';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -20,7 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    HttpClientModule
+    MatGridListModule,
+    HttpClientModule,
+    MatExpansionModule
   ],
   providers: [Services],
   bootstrap: [AppComponent]
