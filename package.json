@@ -5,10 +5,10 @@
     "main": "src/server.js",
     "scripts": {
         "setup": "npm install && npm update",
-        "start": "node src/server.js",
-        "client": "cd ./../Personalblog/frontend && npm start",
+        "test": "node src/server.js",
+        "client": "cd ./../Personalblog/frontend && npm test",
         "server": "cd ./../Personalblog/ && node server.js",
-        "dev": "concurrently \"npm run server\" \"npm run client\""
+        "start": "concurrently \"npm run server\" \"npm run client\""
     },
     "keywords": [
         "express",
