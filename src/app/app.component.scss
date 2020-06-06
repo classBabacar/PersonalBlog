@@ -1,19 +1,5 @@
-// #header {
-//   grid-area: header_section;
-//   background-color: #FDD; 
-// }
-
-
-// #app {
-//   grid-template-areas: "header" "main" "footer";
-//   display: grid;
-//   grid-template-columns: 1fr;
-//   grid-template-rows:  0.2fr 1fr 0.1fr;
-//   height: 100vh;
-// }
-
-html{
-  height: 100%;
+html, body {
+  height:100%; /*both html and body*/
 }
 
 body{
@@ -23,7 +9,7 @@ body{
   grid-template-areas:
         "header_section"
         "Site-content_section";
-  grid-template-rows: 0 27%; /* 100px for header, 100% for content section, 50px for footer */
+  grid-template-rows: 0 25%; /* 100px for header, 100% for content section, 50px for footer */
 }
 
 .header { 
