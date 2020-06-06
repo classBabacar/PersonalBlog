@@ -5,7 +5,7 @@
     "main": "src/server.js",
     "scripts": {
         "setup": "npm install && npm update",
-        "start": "node src/server.js",
+        "start": "(cd ./../Personalblog/frontend && npm install && npm start); (cd ./../Personalblog/ && npm install && node server.js); ",
         "client": "cd ./../Personalblog/frontend && npm start",
         "server": "cd ./../Personalblog/ && node server.js",
         "dev": "concurrently \"npm run server\" \"npm run client\""
