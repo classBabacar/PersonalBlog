@@ -1,47 +1,48 @@
-<mat-grid-list cols="4" rows="4" rowHeight="100px">
-  <mat-grid-tile [colspan]="1" [rowspan]="3">
-    <mat-card id ="first">
-      <mat-card-title> Projects</mat-card-title>
-        <ul>
-          <li><a href="https://github.com/classBabacar/Connect4WithAI" target="_blank">Game of Connect4 with AI component</a></li>
-              <br>
-          <li><a href="https://github.com/classBabacar/Hangman" target="_blank">Hangman</a></li>
-              <br>
-          <li><a href="https://github.com/classBabacar/GameOfMastermind" target="_blank">Mastermind</a></li>
-              <br>
-        </ul>  
-      </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile [colspan]="3" [rowspan]="6">
-    <mat-card id="second">
-      <p><strong>Office of Information Technology</strong> – Software Engineering Intern; Athens, OH <span style="float:right">January 2019 – May 2020 </span> </p>
-      <ul>
-        <li>Building and deploying docker containers for most commonly used university applications</li>
-        <li>Decreased size of application with the use of docker by more than 50% of applications original size</li>
-        <li>Contributed to the design and development of applications as well as implementing bug fixes in python</li>
-      </ul>
-        
-      <p> <strong>Chipotle </strong> – Crew Member; Athens, OH<span style="float:right">August 2018 – December 2018  </span></p>
-      <ul>
-        <li>Collaborated with crew members to ensure the delivery of efficient and high-quality service</li>
-        <li>Maintained calmness in high-stress, fast-paced environment</li>
-        <li>Effectively assisted customers thus increasing stores throughput by 20%</li>
-      </ul>
-    </mat-card>
+<div class="grid-container">
+  <mat-grid-list cols="4" rows="4" rowHeight="100px">
+    <mat-grid-tile [colspan]="1" [rowspan]="3">
+      <mat-card id ="first">
+        <mat-card-title> Projects</mat-card-title>
+          <ul>
+            <li><a href="https://github.com/classBabacar/Connect4WithAI" target="_blank">Game of Connect4 with AI component</a></li>
+                <br>
+            <li><a href="https://github.com/classBabacar/Hangman" target="_blank">Hangman</a></li>
+                <br>
+            <li><a href="https://github.com/classBabacar/GameOfMastermind" target="_blank">Mastermind</a></li>
+                <br>
+          </ul>  
+        </mat-card>
     </mat-grid-tile>
-  <mat-grid-tile [colspan]="1" [rowspan]="3" >
-    <mat-card class='flippable-card' [ngClass]="{'flipped':flipped}" (click)="generateNewFact()">
-      <div id='third'>
-        <mat-card-title>Click me for a random fact</mat-card-title>
-      </div>
-      <mat-card class='back'>
-        <div class='formattext'>
-          <p>
-            {{this.fact}}
-          </p>
-        </div>
+    <mat-grid-tile [colspan]="3" [rowspan]="6">
+      <mat-card id="second">
+        <p><strong>Office of Information Technology</strong> – Software Engineering Intern; Athens, OH <span style="float:right">January 2019 – May 2020 </span> </p>
+        <ul>
+          <li>Building and deploying docker containers for most commonly used university applications</li>
+          <li>Decreased size of application with the use of docker by more than 50% of applications original size</li>
+          <li>Contributed to the design and development of applications as well as implementing bug fixes in python</li>
+        </ul>
+          
+        <p> <strong>Chipotle </strong> – Crew Member; Athens, OH<span style="float:right">August 2018 – December 2018  </span></p>
+        <ul>
+          <li>Collaborated with crew members to ensure the delivery of efficient and high-quality service</li>
+          <li>Maintained calmness in high-stress, fast-paced environment</li>
+          <li>Effectively assisted customers thus increasing stores throughput by 20%</li>
+        </ul>
       </mat-card>
-    </mat-card>
-  </mat-grid-tile>
-</mat-grid-list> 
-
+      </mat-grid-tile>
+    <mat-grid-tile [colspan]="1" [rowspan]="3" >
+      <mat-card class='flippable-card' [ngClass]="{'flipped':flipped}" (click)="generateNewFact()">
+        <div id='third'>
+          <mat-card-title>Click me for a random fact</mat-card-title>
+        </div>
+        <mat-card class='back'>
+          <div class='formattext'>
+            <p>
+              {{this.fact}}
+            </p>
+          </div>
+        </mat-card>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list> 
+</div>
