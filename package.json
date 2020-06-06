@@ -2,13 +2,12 @@
     "name": "bobsbackend",
     "version": "1.0.0",
     "description": "bobsbackend is the ultimate backend solution",
-    "main": "src/server.js",
     "scripts": {
         "setup": "npm install && npm update",
-        "test": "node src/server.js",
+        "test": "cd ./../Personalblog/ && node server.js",
         "client": "cd ./../Personalblog/frontend && npm test",
         "server": "cd ./../Personalblog/ && node server.js",
-        "start": "concurrently \"npm run server\" \"npm run client\""
+        "start": "npm install && npm update && concurrently \"npm run server\" \"npm run client\""
     },
     "keywords": [
         "express",
