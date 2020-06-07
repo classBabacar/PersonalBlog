@@ -1,4 +1,17 @@
-.content { 
-  width: 100%;
-  background:salmon;
+#app {
+  grid-template-areas: "header" "main";
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows:  0.2fr 1fr ;
+  height: 100%;
+}
+
+#header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+  display: block;
+  height: 100%;
 }
