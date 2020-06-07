@@ -1,6 +1,5 @@
-<div class="grid-container">
-  <mat-grid-list cols="4" rows="4" rowHeight="100px">
-    <mat-grid-tile [colspan]="1" [rowspan]="3">
+<mat-grid-list cols="2" rowHeight="fit"  style="height: 100%">
+    <mat-grid-tile colspan="1" rowspan="1">
       <mat-card id ="first">
         <mat-card-title> Projects</mat-card-title>
           <ul>
@@ -12,8 +11,9 @@
                 <br>
           </ul>  
         </mat-card>
+    
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="3" [rowspan]="6">
+    <mat-grid-tile colspan="1" rowspan="2">
       <mat-card id="second">
         <p><strong>Office of Information Technology</strong> – Software Engineering Intern; Athens, OH <span style="float:right">January 2019 – May 2020 </span> </p>
         <ul>
@@ -29,11 +29,11 @@
           <li>Effectively assisted customers thus increasing stores throughput by 20%</li>
         </ul>
       </mat-card>
-      </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="3" >
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">
       <mat-card class='flippable-card' [ngClass]="{'flipped':flipped}" (click)="generateNewFact()">
         <div id='third'>
-          <mat-card-title>Click me for a random fact</mat-card-title>
+          <h1>Click me for a random fact</h1>
         </div>
         <mat-card class='back'>
           <div class='formattext'>
@@ -44,5 +44,4 @@
         </mat-card>
       </mat-card>
     </mat-grid-tile>
-  </mat-grid-list> 
-</div>
+</mat-grid-list>
