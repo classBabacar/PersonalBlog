@@ -1,30 +1,42 @@
-#first{
-  background-color: #FFC90E;
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-}
-
-#second{
-  background-color: coral;
+#first, #second, #third{
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   overflow: auto;
 }
 
+#first{
+  background-color: #FFC90E;
+}
+
+#second{
+  background-color: coral;
+}
+
+.formattext, #third{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  
+}
+
 #third{
   position: relative;
   float: left;
-  top: 50%;
-  left: 50%;
-  height: 100%;
-  transform: translate(-50%, -50%);  
-  box-sizing: border-box;
-  width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;   /* The same as your div height */
+  align-items: center;
+}
+
+.formattext{
+  position: absolute;
+  width: 90%;
+  font-size: 1.5em;
+}
+
+.back{
+  position: relative;
+  top: 5%;
+  height: 80%;
 }
 
 .flippable-card {
@@ -46,19 +58,4 @@
 
 .flippable-card.flipped {
   transform: rotateY( 180deg );
-}
-
-.back{
-  position: relative;
-  top: 5%;
-  height: 80%;
-}
-
-.formattext{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%); 
-  width: 90%;
-  font-size: 1.5em;
 }
