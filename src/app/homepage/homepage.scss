@@ -53,13 +53,26 @@
 }
 
 .flippable-card .back {
-  transform: rotateY( 180deg );
+  display: block;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -ms-transform: translate3d(180deg);
+  -webkit-transform: translate3d(180deg);
+  transform: translate3d(180deg);
 }
 
 .flippable-card.flipped {
-  transform: rotateY( 180deg );
+  display: block;
+  -webkit-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -ms-transform: translate3d(180deg);
+  -webkit-transform: translate3d(180deg);
+  transform: translate3d(180deg);
 }
-
 
 @media only screen and (max-width: 600px) {
   .flippable-card {
@@ -73,7 +86,6 @@
     width: auto;
   }
 
-
   .formattext{
     position: absolute;
     text-align: center;
@@ -83,6 +95,15 @@
   #paragraph{
     font-size: 12px;
   }
+  
+  ul
+  {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+  }
 
-
+  li{
+    margin: 10px 0;
+  }
 }
