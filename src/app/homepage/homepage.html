@@ -35,15 +35,16 @@
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
-      <mat-card class='flippable-card' [ngClass]="{'flipped':flipped}" (click)="generateNewFact()">
-        <div id='third'>
-          <h1>Click me for a random fact</h1>
+
+      <mat-card id ="layout">
+        <div>
+          <div>   
+            <button class="button" (click)="generateNewFact()">Fact Generator</button>
+          </div>
         </div>
-        <mat-card class='back'>
-          <mat-card-content class='formattext'>
-                {{this.fact}}
-          </mat-card-content>
-        </mat-card>
+        <mat-card-content id="format">
+          {{this.fact}}
+        </mat-card-content>
       </mat-card>
     </mat-grid-tile>
 </mat-grid-list>
