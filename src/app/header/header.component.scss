@@ -29,10 +29,19 @@ header#banner h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 5%;
-  margin-right: auto;
+  margin-left: auto;
+  margin-right: 8 0%;
   font-size: 1.5em;
 }
 mat-card{
   background-color: coral;
+}
+
+@media only screen and (max-width: 600px) {
+  .main-div{
+    display: flex;
+    justify-content: center;
+    font-size: 5px;
+    box-sizing: border-box;
+  }
 }
