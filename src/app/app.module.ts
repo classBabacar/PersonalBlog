@@ -10,7 +10,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { Services } from './services/services';
 import { HttpClientModule } from '@angular/common/http';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatButtonModule} from '@angular/material/button';
     MatGridListModule,
     HttpClientModule,
     MatExpansionModule,
-    MatButtonModule
+    MatButtonModule,
+    MatMenuModule
   ],
   providers: [Services],
   bootstrap: [AppComponent]
