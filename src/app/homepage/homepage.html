@@ -1,21 +1,23 @@
 <mat-grid-list cols="2" rowHeight="fit"  style="height: 100%">
     <mat-grid-tile colspan="1" rowspan="1">
       <mat-card id ="first">
+        <h2> Hi, I am Babacar Ndoye and ...</h2>
         <mat-card-content id="paragraph">
-          <mat-card-title> Projects</mat-card-title>
           <ul>
-            <li><a href="https://github.com/classBabacar/Connect4WithAI" target="_blank">Game of Connect4 with AI component</a></li>
-                <br>
-            <li><a href="https://github.com/classBabacar/Hangman" target="_blank">Hangman</a></li>
-                <br>
-            <li><a href="https://github.com/classBabacar/GameOfMastermind" target="_blank">Mastermind</a></li>
-                <br>
-          </ul>  
+            <div id="indent">
+              <li>I'm from Staten Island, NY.</li>
+              <li>I play chess player.</li>
+              <li>I play basketball.</li>
+              <li>I love programming.</li>
+              <li>I always want to get better.</li>
+            </div>
+          </ul>
         </mat-card-content>
       </mat-card>
     </mat-grid-tile>
-    <mat-grid-tile colspan="1" rowspan="2">
+    <mat-grid-tile colspan="1" rowspan="1">
       <mat-card id="second">
+        <h2> Work Experience ...</h2>
         <mat-card-content>
          <div id="paragraph"> 
            <span> <strong>Office of Information Technology</strong> – Software Engineering Intern </span>
@@ -35,16 +37,79 @@
       </mat-card>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
-
-      <mat-card id ="layout">
-        <div>
-          <div>   
-            <button class="button" (click)="generateNewFact()">Fact Generator</button>
-          </div>
+      <mat-card id="third">
+        <button mat-button [matMenuTriggerFor]="menu" class="btn"><h2> Projects ...</h2></button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item (click)="changeData('hangman')">Hangman</button>
+          <button mat-menu-item (click)="changeData('connect4')">Connect4</button>
+          <button mat-menu-item (click)="changeData('mastermind')">Mastermind</button>
+        </mat-menu>
+      
+        <div *ngIf="connect4 == false && hangman == false && mastermind == false" id="formattext">
+          <p>
+            These are all the programs I made thus far click on the projects button to see!
+          </p>
         </div>
-        <mat-card-content id="format">
-          {{this.fact}}
-        </mat-card-content>
+        <div *ngIf="connect4" id="formattext">
+          <h3>Connect4</h3>
+          <p>
+            Growing up I played this game a lot, it means so much to me because of the friendships I've developed playing it. Therefore, when I increased my programming skills 
+            this was one of programs I wanted to create the most, as I also learned so much from making this.
+            <br><br>
+            Connect4 is a simple game to the naked eye but as you begin to study it you notice it's complexities, this was very rewarding theses were the following concepts I learned:
+          </p>
+          <ul>
+            <li><strong>Classes</strong> - A way to decompose a game like connect4 into pieces, color and board.</li>
+            <li><strong>Minimax</strong> - A way for an AI to evaluate a sequence of board states and make a logical decision.</li>
+            <li><strong>Operating Systems/Docker</strong> - It was cool to figure out the opcodes of different colors on different machines it made me see the bigger 
+              picture not even for games but when I write any program in general, try to give everyone the oppurtunty to view/use it. </li>
+          </ul>
+          <p> If you would like to view you it you can find it here: <a href="https://github.com/classBabacar/Connect4WithAI" target="_blank"> Connect4 </a></p>
+        </div>
+
+        <div *ngIf="mastermind" id="formattext">
+          <h3>Mastermind</h3>
+          <p>
+            As I understood algorithms a bit more, I started to research which resulted in me coming upon something very interesting. In 1977, 
+            <a href="https://www.premiosfronterasdelconocimiento.es/wp-content/uploads/sites/2/2019/06/FBBVA-10-tic-Knuth.jpg" target="_blank">Donald Knuth</a> came up with a
+            really cool idea for this game called <a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)">mastermind.</a> In simple explanation, he explained through 
+            mathematics that the game can be won in 5 or less moves where players are given a maximum of 11 moves.
+
+            <br><br>
+            Most of the time for me words can't do justice, that's what drove me to start the program. It also noteworthy that most of the "great" programmers
+            made algorithmic breakthroughs through games such as: <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life" target="_blank">Game of Life</a>, Battleship, Chess, and soo
+            many more. 
+            <br><br>
+            If you would like to view you it you can find it here: <a href="https://github.com/classBabacar/GameOfMastermind" target="_blank"> Mastermind </a>
+          </p>
+        </div>
+        
+        <div *ngIf="hangman" id="formattext">
+          <h3>Hangman</h3>
+          <p>
+            This is my very first personal program. In the beginning, I had no idea what to create to test myself so I would always google cool projects to make and to get "better" where the most
+            common project was hangman. I always look at this program from time to time, these are one of the things that make programming so cool because you can look at programs from the past and look 
+            at your thought process in code as well as see your improvements. This game taught me concepts that were bigger than programming.
+          </p>
+          <ol>
+            <li><strong>Imagination</strong> - Even though hangman is an extremely basic game the amount of things you can do are infinite, changing it from extremely basic to complex. </li>
+            <li><strong>Consistency</strong> - Almost every day in the summer I would work on this program and next thing you know I finished.</li>
+            <li><strong>Having Fun</strong> - The amount of fun I had doing this was undescribable, that's what I think programming is all about. </li>
+          </ol>
+          If you would like to view you it you can find it here: <a href="https://github.com/classBabacar/Hangman" target="_blank"> Hangman </a>
+
+        </div>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile colspan="1" rowspan="1">
+      <mat-card id="fourth" >
+        <button mat-button class="btn" (click)="generateFact()"><h2> Give me a random fact</h2></button>
+        <div id="formattext">
+          <p>
+            <strong>Random Fact: </strong>{{this.fact}}
+          </p>
+        </div>
       </mat-card>
     </mat-grid-tile>
 </mat-grid-list>
