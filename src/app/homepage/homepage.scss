@@ -1,4 +1,4 @@
-#first, #second{
+#first, #second, #third, #fourth{
   width: 100%;
   height: 100%;
   box-sizing: border-box;
@@ -13,32 +13,30 @@
   background-color: coral;
 }
 
-#layout{
-  height: 100%;
-  width: 100%;
-  background-color:#99D9EA;
+#third{
+  background-color: #99D9EA;
 }
 
-#format{
-  height:90%;
-  width:100%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size: 2em;
+#fourth{
+  background-color: #FFC90E;
 }
 
-.button {
-  background-color: coral; /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+#indent li{
+    margin: 10px 0;
+    font-size: 20px;
+  }
+  
+.btn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  font-size: 10px;
   cursor: pointer;
+  border-color: white;
+}
+
+#formattext{
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -69,5 +67,22 @@
     justify-content:center;
     align-items:center;
     font-size: 0.75em;
+  }
+
+  #formattext{
+    font-size: 12px;
+  }
+
+  .btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    font-size: 8px;
+    cursor: pointer;
+    border-color: white;
+  }
+  #indent li{
+    margin: 10px 0;
+    font-size: 10px;
   }
 }
